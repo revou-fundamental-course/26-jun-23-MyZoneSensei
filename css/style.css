@@ -1,0 +1,30 @@
+#headerNavigation {
+    display: flex;
+    justify-content: space-between;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#navigation {
+    display: flex;
+    gap: 10px;
+}
+
+#headerjudul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+}
+
+#subtitle {
+    color: gray;
+    margin-top: -15px;
+}
+
+#sliderfoto {
+    display: flex;
+    flex-direction: row;
+}
