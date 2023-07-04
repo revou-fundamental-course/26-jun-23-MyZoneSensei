@@ -3,35 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Dzikri E-Groceries</title>
 
 </head>
 <body>
     <header>
         <section id="headerNavigation">
-        <a href="">Logo</a>
+        <a href=""><img src="/img/logo onk bulet.png" alt="logo" id="logo"></a>
         <nav id="navigation">
-            <a href="">Home</a>
-            <a href="">Our Package</a>
-            <a href="">Call Us</a>
+            <a class="active" href="#home">Home</a>
+            <a href="#ourpackage">Our Package</a>
+            <a href="#callus">Call Us</a>
         </nav>
         </section>
         <section id="headerjudul">
-            <h1>TOKO KELONTONG TOP MARKOTOP</h1>
-            <h3 id="subtitle">Diskon kalo beli banyak</h3>
+            <h1>Cafe Oshi no Ko</h1>
+            <h3 id="subtitle">Cafe dengan pelayan Waifu</h3>
         </section>
     </header>
     <main>
-        <section id="sliderfoto">
-            <article>
-                <img src="img/logo onk bulet.png" width="40%" height="80%">
-                <h5>Bang udah bang</h5>
+        <section id="kotak1">
+            <article id="artikel">
+                <img src="/img/onk sweet paradise.jpg">
+                <h5>Oshi no Ko Cafe</h5>
             </article>
-            <section>
-                <h3>Hubungin Kami</h3>
-                <p>Moderator akan menghubungin anda 2x24 jam</p>
+            <section id="contact">
+                <h3>Hubungi Kami</h3>
+                <p>Sales akan menghubungi anda 2x24 jam</p>
+                <form id="formulir">
+
+                    <label for="name">Nama Anda:</label>
+                    <input type="text" name="Nama Lengkap" placeholder="Asep budiawan" required>
+                    
+                    <label for="email">Alamat Email:</label>
+                    <input type="email" name="email" placeholder="asep123@gmail.com" required>
+
+                    <label for="interest">Apa yang kamu suka:</label>
+                    <select id="menu" name="menu" required>
+                    <option value="" disabled selected hidden>Pilih menu kesukaanmu</option>
+                    <option value="0">Minuman Kopi</option>
+                    <option value="1">Minuman Non Kopi</option>
+                    <option value="2">Makanan</option>
+                    </select>
+                    <input type="submit" value="Kirim">
+                    
+
+                </form>
             </section>
+
+        </section>
+        <section id="order">
+            <h5>Datanglah ke cafe kami untuk mendapat keuntungan-keuntungan tertentu. Berikut diantaranya:</h5>
+            <ol class="flex-list">
+                <li class="li1">Bertemu dengan karakter tercinta</li>
+                <li class="li2">Disajikan dengan waifu anda</li>
+                <li class="li3">Makanan eksklusif selama event</li>
+                <li class="li4">Harga lebih terjangkau</li>
+        </section>
+        <section id="pemisah">
+            <h2>OUR PACKAGE</h2>
         </section>
 
     </main>
