@@ -39,15 +39,30 @@ body {
     color: white;
 }
 
-@media screen and (max-width: 500px) {
-  .header a {
+#navigation {
+    float: right;
+}
+
+@media screen and (max-width: 700px) {
+    
+    #headerNavigation {
+        flex-direction: column;
+    }
+
+    #headerNavigation a{
+        flex-direction: column;
+    }
+  
+    #header a {
     float: none;
-    display: block;
+    display: flex;
+    flex-direction: column;
     text-align: left;
   }
   
-  .header-right {
+  #navigation {
     float: none;
+    flex-direction: column;
   }
 }
 
@@ -77,6 +92,12 @@ body {
     margin-top: -15px;
 }
 
+.container1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 #kotak1 {
     display: flex;
     flex-direction: row;
@@ -92,6 +113,28 @@ body {
 #artikel img {
     max-width: 50%;
     height: auto;
+}
+
+.cnttext {
+    text-align: center;
+    font-style: italic;
+}
+
+#testi {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#testi p{
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+#testi img{
+    max-width: 64px;
+    padding-left: 20px;
 }
 
 #contact {
@@ -161,15 +204,48 @@ select:required:invalid {
     #artikel {
         width: 100%;
         height: auto;
+        display: flex;
+        flex-direction: column;
     }
     #formulir {
         width: 100%;
         height: auto;
+        display: flex;
+        flex-direction: column;
     }
 }
 
 #order {
     padding-left: 20px;
+    width: 50%;
+}
+
+.benefit {
+    display: flex;
+}
+
+.benefit p{
+    padding-top: 5px;
+}
+
+.benefit .list {
+    padding: 10px;
+}
+
+.circle {
+    background-color: darkslategray;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    color: white;
+    display: inline-block;
+    font-weight: bold;
+    width: 48px;
+    height: 48px;
+    margin-right: 5px;
+    line-height: 48px;
+    text-align: center;
+    justify-content: center;
 }
 
 #pemisah {
