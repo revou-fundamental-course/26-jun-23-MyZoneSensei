@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
-    <script src="/js/script.js"></script>
     <title>Dzikri E-Groceries</title>
 
 </head>
@@ -14,51 +13,74 @@
         <a href=""><img src="/img/logo onk bulet.png" alt="logo" id="logo"></a>
         <nav id="navigation">
             <a class="active" href="#home">Home</a>
-            <a href="#ourpackage">Our Package</a>
-            <a href="#callus">Call Us</a>
+            <a href="#Special Events">Special Events</a>
+            <a href="#Hubungi Kami">Call Us</a>
         </nav>
         </section>
         <section id="headerjudul">
             <h1>Cafe Oshi no Ko</h1>
-            <h3 id="subtitle">Cafe dengan pelayan Waifu</h3>
+            <h3 id="subtitle">Kolaborasi kafe Sweet Paradise dengan Oshi no Ko</h3>
         </section>
     </header>
-    <main>
-        <section id="kotak1">
+    <main id="kotak1">
+        <section>
             <article id="artikel">
-                <img src="/img/onk sweet paradise.jpg">
-                <p class="cnttext">Oshi no Ko X Sweet Paradise Cafe Collaboration</p>
+                <img src="/img/onk sweet paradise.jpg" class="slider">
+                <!-- Inactive 
+                    <img src="/img/onk sweet paradise 2.jpg" class="slider"> 
+                <img src="/img/onk sweet paradise 3.jpeg" class="slider"><img src="/img/onk sweet paradise 4.jpeg" class="slider"> -->
+                <!-- <div>
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a id="next" class="next" onclick="plusSlides(1)">❯</a>
+                </div>
+                <div style="text-align:center">
+                    <span class="dot active" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                </div> -->
+                <p class="cnttext">"Konsep yang unik, pelayanan yang ramah"</p>
                 <section id="testi">
                     <img src="https://img.uxwing.com/wp-content/themes/uxwing/download/peoples-avatars-thoughts/avatar-icon.png" alt="avatar-icon">
-                    <p>Dzikri Ahmad <br>
+                    <p>Dzikri Ahmad Fauzi<br>
                     Videographer, 18</p>
                 </section>
 
             </article>
-            <section id="contact"> 
-                <h3>Hubungi Kami</h3>
-                <p>Sales akan menghubungi anda 2x24 jam</p>
-                <form id="formulir">
-
-                    <label for="name">Nama Anda:</label>
-                    <input type="text" name="Nama Lengkap" placeholder="Asep budiawan" required>
-                    
-                    <label for="email">Alamat Email:</label>
-                    <input type="email" name="email" placeholder="asep123@gmail.com" required>
-
-                    <label for="interest">Apa yang kamu suka:</label>
-                    <select id="menu" name="menu" required>
-                    <option value="" disabled selected hidden>Pilih menu kesukaanmu</option>
-                    <option value="0">Minuman Kopi</option>
-                    <option value="1">Minuman Non Kopi</option>
-                    <option value="2">Makanan</option>
-                    </select>
-                    <input type="submit" value="Kirim">
-                    
-
-                </form>
-            </section>
         </section>
+        <section id="contact"> 
+            <h3>Hubungi Kami</h3>
+            <p>Sales akan menghubungi anda 2x24 jam</p>
+            <form id="formulir">
+
+                <label for="name">Nama Anda:</label>
+                <input type="text" name="Nama Lengkap" id="formnama" placeholder="Dzikri Ahmad Fauzi" required>
+                
+                <label for="email">Alamat Email:</label>
+                <input type="email" name="email" id="formemail" placeholder="myzonesensei@gmail.com" required>
+
+                <label for="phone">Nomor Telepon</label>
+                <input type="tel" maxlength="12" name="phone" id="formtelp" placeholder="08xx xxxx xxxx" required>
+
+                <label for="msg">Pesan</label>
+                <textarea id="formmsg" name="msg"></textarea>
+                
+                <!-- Kolom option (canceled)
+                <label for="interest">Apa yang kamu suka:</label>
+                <select id="menu" name="menu" required>
+                <option value="" disabled selected hidden>Pilih menu kesukaanmu</option>
+                <option value="0">Minuman Kopi</option>
+                <option value="1">Minuman Non Kopi</option>
+                <option value="2">Makanan</option>
+                </select> 
+                -->
+                <input type="submit" value="Kirim">
+                
+
+            </form>
+        </section>
+        </main>
+        <main>
         <section id="order">
             <h5>Kali ini kafe Sweet Paradise di Jepang melakukan kolaborasi dengan anime yang saat ini sedang hangat. Tak lain tak bukan adalah Oshi no Ko.
                 Kalian dapat bertemu dengan karakter-karakter dari Oshi no Ko di kafe ini. Selain itu, berikut beberapa hal yang akan kalian dapatkan ketika datang ke kafe ini:
@@ -82,15 +104,15 @@
             </div>
             <div><p>Photobooth spesial Oshi no Ko</p></div>
         </section>
-        
+
         <section id="pemisah">
-            <h2>OUR PACKAGE</h2>
+            <h2>Special Events</h2>
         </section>
 
-        <section>
+        <section id="tabeldatar">
         <div class="list2">
             <div class="logo-list2">
-                <img src="../assets/idea.png" alt="">
+                <img src="/img/hoshino eyes 1.png" alt="">
             </div>
             <div class="content-package">
                 <h2>Coffee</h2>
@@ -100,7 +122,7 @@
 
         <div class="list2">
             <div class="logo-list2">
-                <img src="../assets/idea.png" alt="">
+                <img src="/img/hoshino eyes 2.png" alt="">
             </div>
             <div class="content-package">
                 <h2>Latte Art</h2>
@@ -110,16 +132,18 @@
 
         <div class="list2">
             <div class="logo-list2">
-                <img src="../assets/idea.png" alt="">
+                <img src="/img/hoshino eyes 3.png" alt="">
             </div>
             <div class="content-package">
                 <h2>Tea</h2>
                 <p>Red Tea for relax your body and watch Oshi no Ko</p>
             </div>
         </div>
+        </section>
+        <section id="tabeldatar">
         <div class="list2">
             <div class="logo-list2">
-                <img src="../assets/star.png" alt="">
+                <img src="/img/hoshino eyes 1.png" alt="">
             </div>
             <div class="content-package">
                 <h2>Snacks</h2>
@@ -130,7 +154,7 @@
         <div class="list2">
 
             <div class="logo-list2">
-                <img src="../assets/star.png" alt="">
+                <img src="/img/hoshino eyes 2.png" alt="">
             </div>
             <div class="content-package">
                 <h2>Rice Bowl</h2>
@@ -141,7 +165,7 @@
         </div>
         <div class="list2">
             <div class="logo-list2">
-                <img src="../assets/star.png" alt="">
+                <img src="/img/hoshino eyes 3.png" alt="">
             </div>
             <div class="content-package">
                 <h2>Watch Party</h2>
@@ -151,6 +175,16 @@
         </div>
         </section>
     </main>
-    
+    <hr>
+    <footer class="penutup">
+        <h1>Terima Kasih</h1>
+        <p>Terima Kasih telah mengunjungi website kami.
+            Silahkan datang saat acara digelar dengan menu-menu spesial kami.
+            Isi formulir diatas untuk melakukan reservasi.
+        </p>
+        <button type="menu">Call To Action</button>
+    </footer>
+    <!--inactive 
+        <script src="/js/script.js"></script> -->
 </body>
 </html>

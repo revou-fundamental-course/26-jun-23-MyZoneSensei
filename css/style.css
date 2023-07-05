@@ -4,6 +4,12 @@ body {
    margin: 25px 200px 25px 200px;
 }
 
+@media screen and (max-width:768px) {
+    body {
+        margin: auto;
+    }
+    
+}
 
 #headerNavigation {
     display: flex;
@@ -43,7 +49,8 @@ body {
     float: right;
 }
 
-@media screen and (max-width: 700px) {
+/* responsif header */
+@media screen and (max-width: 768px) {
     
     #headerNavigation {
         flex-direction: column;
@@ -98,6 +105,7 @@ body {
     justify-content: space-between;
 }
 
+/* slider foto */
 #kotak1 {
     display: flex;
     flex-direction: row;
@@ -111,6 +119,7 @@ body {
 }
 
 #artikel img {
+    align-items: center;
     max-width: 50%;
     height: auto;
 }
@@ -137,13 +146,14 @@ body {
     padding-left: 20px;
 }
 
+/* formulir */
 #contact {
     text-align: center;
     display: block;
     flex-direction: row;
     gap: 10px;
     padding: 5px;
-    background-color:rgb(180, 180, 180);
+    background-color: rgb(216, 216, 224);
     border-radius: 15px;
     background-size: cover;
     margin-left: 25px;
@@ -154,10 +164,17 @@ body {
 #formulir {
     display: block;
     flex-direction: row;
+    box-sizing: border-box;
     border-radius: 100px;
     margin-bottom:  5px;
     text-align: left;
     padding: 10px;
+}
+
+#formulir textarea{
+    width: 100%;
+    resize: none;
+    
 }
 
 #formulir label, 
@@ -166,9 +183,10 @@ body {
     display: inline-block;
     margin-bottom:5px ;
     width: 100%;
-    padding: 10px 15px;
+    padding: 10px 10px 10px 0px;
 }
 
+/* option (canceled)
 select:required:invalid {
     color: gray;
   }
@@ -177,10 +195,10 @@ select:required:invalid {
   }
   option {
     color: black;
-  }
+  } */
 
 #formulir input {
-    width: 95%;
+    width: 100%;
 }
 
 #formulir input[type="submit"] {
@@ -200,12 +218,20 @@ select:required:invalid {
     color: white;
 }
 
-@media screen and (max-width: 600px) {
+/* responsif bagian artikel */
+@media screen and (max-width: 768px) {
+    #kotak1 {
+        display: flex;
+        flex-direction: column;
+    }
     #artikel {
         width: 100%;
         height: auto;
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
     }
     #formulir {
         width: 100%;
@@ -215,9 +241,10 @@ select:required:invalid {
     }
 }
 
+/* bagian list order */
 #order {
-    padding-left: 20px;
-    width: 50%;
+    padding: 20px 20px;
+    max-width: 50%;
 }
 
 .benefit {
@@ -248,11 +275,108 @@ select:required:invalid {
     justify-content: center;
 }
 
+/* kotak pemisah */
 #pemisah {
     text-align: center;
     padding: 70px;
     display: block;
-    background-color:silver;
-    color: black;
+    background-color:darkslategray;
+    color: white;
     height: 60px;
+}
+
+/* bagian tabel datar */
+#tabeldatar {
+    width: 960px;
+    margin: 50px auto;
+    display: flex;
+    text-align: left;
+}
+
+.list2 {
+    display: flex;
+    justify-content: center;
+    width: 480px;
+    height: 100px;
+}
+
+.list2 img {
+    margin: 20px 20px 20px 20px;
+    width: 48px;
+    border: solid 2px black;
+    border-radius: 50%;
+}
+
+/* responsif tabel datar */
+@media screen and (max-width: 768px) {
+    #order {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        max-width: 100%;
+
+    }
+    .benefit {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .list2 {
+        display: flex;
+        flex-direction: column;
+        width:auto;
+        height: auto;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        width: auto;
+        padding: 0px 20px;
+    }
+
+    .list2 img{
+        margin: 20px auto;
+        max-width: 48px;
+        height: auto;
+    }
+
+    #tabeldatar {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: 0px;
+        width: auto;
+    }
+    
+}
+
+.penutup {
+    text-align: center;
+    padding: 20px 300px;
+}
+
+.penutup p {
+    color: grey;
+}
+
+.penutup button {
+    background-color: darkslategray;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+    cursor: pointer;
+    width: 50%;
+}
+
+.penutup button:hover {
+    background-color: palevioletred;
+}
+
+@media screen and (max-width:768px) {
+    .penutup {
+        padding: 20px;
+
+    }
+    
 }
