@@ -109,7 +109,7 @@ body {
 }
 
 #formulir {
-    display: inline-block;
+    display: block;
     flex-direction: row;
     border-radius: 100px;
     margin-bottom:  5px;
@@ -120,7 +120,7 @@ body {
 #formulir label, 
 #formulir input,
 #formulir select {
-    float: left;
+    display: inline-block;
     margin-bottom:5px ;
     width: 100%;
     padding: 10px 15px;
