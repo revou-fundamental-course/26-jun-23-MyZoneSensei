@@ -406,3 +406,7 @@ select:required:invalid {
     }
     
 }
+
+@import
+  "minima/skins/{{ site.minima.skin | default: 'classic' }}",
+  "minima/initialize";
