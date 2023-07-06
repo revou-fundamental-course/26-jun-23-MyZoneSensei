@@ -1,92 +1,124 @@
-var slideIndex = 1;
+let slideIndex = 1;
+const slides = document.getElementsByClassName('slider');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+const dots = document.getElementsByClassName('dot');
+
 showSlides(slideIndex);
 
-// Start autoplaying automatically
-var autoplayInterval = setInterval(function() {
-
-    // Get element via id and click next
-    document.getElementById("next").click();
-    
-   
-  }, 2500); // Do this every 1 second, increase this!
-
-// Stop function added to button
-function stopAutoplay() {
-
-  // Stop the autoplay
-  clearInterval(autoplayInterval);
-
-}
-
-
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
 function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("slider");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {
-    slideIndex = 1
-  }
-  if (n < 1) {
-    slideIndex = slides.length
-  }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = 'none';
   }
 
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
+
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(' active', '');
+  }
+
+
+  slides[n - 1].style.display = 'block';
+  dots[n - 1].className += ' active';
 }
+
+
+function plusSlides(n) {
+  slideIndex += n;
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  } else if (slideIndex < 1) {
+    slideIndex = slides.length;
+  }
+  showSlides(slideIndex);
+}
+
+
+function currentSlide(n) {
+  if (n > slides.length) {
+    n = 1;
+  } else if (n < 1) {
+    n = slides.length;
+  }
+  slideIndex = n;
+  showSlides(slideIndex);
+}
+
+
+function autoSlide() {
+  plusSlides(1);
+}
+
+
+setInterval(autoSlide, 2500);
+
+
+const form = document.getElementById('formulir');
+const namaInput = document.getElementById('formnama');
+const emailInput = document.getElementById('formemail');
+const telpInput = document.getElementById('formtelp');
+const msgInput = document.getElementById('formmsg');
+
+form.addEventListener('submit', function(event) {
+
+  event.preventDefault();
+
+  validateForm();
+});
 
 function validateForm() {
-  var fullname = document.getElementById("formnama").value;
-  var email = document.getElementById("formemail").value;
-  var phone = document.getElementById("formtelp").value;
-  var message = document.getElementById("formmsg").value;
+  const namaValue = namaInput.value.trim();
+  const emailValue = emailInput.value.trim();
+  const telpValue = telpInput.value.trim();
+  const msgValue = msgInput.value.trim();
 
-  if (fullname == "") {
-    alert("Nama harus diisi");
-    return false;
+  if (namaValue === '') {
+    showError(namaInput, 'Nama harus diisi');
+  } else {
+    showSuccess(namaInput);
   }
 
-  if (email !== "") {
-    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailPattern.test(email)) {
-      alert("Format email tidak valid");
-      return false;
-    }
+  if (emailValue === '') {
+    showError(emailInput, 'Email harus diisi');
+  } else if (!isValidEmail(emailValue)) {
+    showError(emailInput, 'Email tidak valid');
+  } else {
+    showSuccess(emailInput);
   }
 
-  if (phone !== "") {
-    var phonePattern = /^[0-9]{9,12}$/;
-    if (!phonePattern.test(phone)) {
-      alert("Format nomor telepon tidak valid");
-      return false;
-    }
+  if (telpValue === '') {
+    showError(telpInput, 'Nomor telepon harus diisi');
+  } else if (!isValidTelp(telpValue)) {
+    showError(telpInput, 'Nomor telepon tidak valid');
+  } else {
+    showSuccess(telpInput);
   }
 
-  if (message == "") {
-    alert("Pesan harus diisi");
-    return false;
+  if (msgValue === '') {
+    showError(msgInput, 'Pesan harus diisi');
+  } else {
+    showSuccess(msgInput);
   }
+}
 
-  if (option == "") {
-    alert("Silakan pilih opsi");
-    return false;
-  }
+function showError(input, message) {
+  const formControl = input.parentElement;
+  formControl.className = 'form-control error';
+  const errorText = formControl.querySelector('small');
+  errorText.innerText = message;
+}
 
-  return true;
+function showSuccess(input) {
+  const formControl = input.parentElement;
+  formControl.className = 'form-control success';
+}
+
+function isValidEmail(email) {
+  const emailRegex = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
+  return emailRegex.test(email);
+}
+
+function isValidTelp(telp) {
+  const telpRegex = /^[0-9]{4} [0-9]{4} [0-9]{4}$/;
+  return telpRegex.test(telp);
 }

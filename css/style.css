@@ -107,21 +107,34 @@ body {
 
 /* slider foto */
 #kotak1 {
+    width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
 }
 
 #artikel {
+    width: 100%;
     margin-left: 0px;
     text-align: center;
     padding-left: 0px;
+    align-items: center;
+    justify-content: center;
 }
 
 #artikel img {
+    object-fit: contain;
     align-items: center;
+    justify-content: center;
     max-width: 50%;
     height: auto;
+    position: relative;
+}
+
+.slider {
+    align-items: center;
+    justify-content: center;
 }
 
 .cnttext {
@@ -148,17 +161,18 @@ body {
 
 /* formulir */
 #contact {
+    width: 70%;
     text-align: center;
     display: block;
     flex-direction: row;
-    gap: 10px;
-    padding: 5px;
+    padding: 25px;
     background-color: rgb(216, 216, 224);
     border-radius: 15px;
     background-size: cover;
     margin-left: 25px;
     margin-right: 25px;
     margin-bottom: 20px;
+    box-sizing: border-box;
 }
 
 #formulir {
@@ -168,13 +182,15 @@ body {
     border-radius: 100px;
     margin-bottom:  5px;
     text-align: left;
-    padding: 10px;
+    padding: 20px;
 }
 
 #formulir textarea{
-    width: 100%;
     resize: none;
-    
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
 }
 
 #formulir label, 
@@ -184,6 +200,7 @@ body {
     margin-bottom:5px ;
     width: 100%;
     padding: 10px 10px 10px 0px;
+    box-sizing: border-box;
 }
 
 /* option (canceled)
@@ -233,11 +250,19 @@ select:required:invalid {
         justify-content: center;
         margin-bottom: 20px;
     }
+    #contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
     #formulir {
         width: 100%;
         height: auto;
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }
 
@@ -249,6 +274,7 @@ select:required:invalid {
 
 .benefit {
     display: flex;
+    padding-left: 20px;
 }
 
 .benefit p{
